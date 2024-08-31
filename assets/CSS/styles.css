@@ -1,0 +1,110 @@
+/* VARIABLES */
+:root {
+    --c-dark: #212121;
+    --c-purple: #72578f;
+    --c-dark-purple: #231a2e;
+    --c-yellow: #F9E400;
+    --c-orange: #FFAF00;
+    --c-red: #F5004F;
+    --c-font-base: "Poppins", sans-serif;
+    --box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
+    --transition: all 0.5s ease;
+    --c-rgb-dark-purple: rgba(37, 31, 44, 1);
+}
+
+/* HELPERS */
+body {
+    font-family: var(--c-font-base);
+    line-height: 1.7;
+    color: var(--c-dark);
+}
+
+h1, h2, h3, h4, h5, h6, 
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 700;
+    color: var(--c-yellow); 
+    text-shadow: 2px 2px #ff0000
+}   
+
+a {
+    text-decoration: none;
+    color: var(--c-purple);
+    transition: var(--transition);
+}
+
+
+a:hover {
+    color: var(--c-red);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-padding {
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--c-purple);
+    box-shadow: var(--box-shadow);
+}
+
+.navbar-brand img {
+    max-width: 5%;
+    max-height: 5%;
+}
+
+.navbar-nav .nav-link{
+    font-weight: 500;
+    color: var(--c-yellow);
+    text-shadow: 2px 2px #ff0000
+}
+
+.navbar-nav .nav-link.active{
+    color: var(--c-yellow);
+}
+
+/* HERO */
+#hero {
+    background: linear-gradient(rgba(102, 73, 182, 0.5), var(--c-rgb-dark-purple)), url(../image/checker.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* ABOUT */
+#about {
+    background-color: #212121;
+    background-position: center;
+    background-size: cover;
+}
+
+#about img {
+    border: 5px solid var(--c-orange);
+    border-radius: 10px;
+    box-shadow: 20px 20px var(--c-red);
+}
+
+/* SECTION TITLE*/
+.section-title {
+    margin-bottom: 60px;
+}
+
+.section-title .line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--c-rgb-dark-purple);
+    margin: 16px auto 24px auto;
+}
+
+.section-title p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--c-orange);
+}
+
+
