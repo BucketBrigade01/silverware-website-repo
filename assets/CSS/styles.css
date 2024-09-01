@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: 700;
     color: var(--c-yellow); 
-    text-shadow: 2px 2px #ff0000
+    text-shadow: 4px 4px #ff0000
 }   
 
 a {
@@ -32,6 +32,10 @@ a {
     transition: var(--transition);
 }
 
+p {
+    font-weight: 600;
+    color: var(--c-orange);
+}
 
 a:hover {
     color: var(--c-red);
@@ -77,7 +81,7 @@ img {
 
 /* ABOUT */
 #about {
-    background-color: #212121;
+    background-color: var(--c-dark-purple);
     background-position: center;
     background-size: cover;
 }
@@ -86,6 +90,12 @@ img {
     border: 5px solid var(--c-orange);
     border-radius: 10px;
     box-shadow: 20px 20px var(--c-red);
+    padding-bottom: 5px;
+}
+
+/* MEMBERS */
+#members {
+    background-color: var(--c-orange);
 }
 
 /* SECTION TITLE*/
@@ -96,7 +106,13 @@ img {
 .section-title .line {
     width: 60px;
     height: 4px;
-    background-color: var(--c-rgb-dark-purple);
+    background-color: var(--c-yellow);
+    margin: 16px auto 24px auto;
+}
+
+.section-title .line-long {
+    height: 4px;
+    background-color: var(--c-yellow);
     margin: 16px auto 24px auto;
 }
 
@@ -104,7 +120,31 @@ img {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 600;
     color: var(--c-orange);
 }
 
+.section-title-dark h1 {
+    color: var(--c-dark-purple);
+}
 
+/* IMAGE ZOOM*/
+
+.image-zoom {
+    position: relative;
+    overflow: visible;
+}
+
+.image-zoom-wrapper {
+    overflow: visible;
+    position: relative;
+}
+
+.image-zoom-wrapper img {
+    transition: var(--transition);
+}
+
+.image-zoom:hover .image-zoom-wrapper img{
+    transform: scale(1.1);
+    box-shadow: -25px -25px var(--box-shadow);
+}
