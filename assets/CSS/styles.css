@@ -1,3 +1,8 @@
+/* HTML */
+html {
+    overflow-x: hidden;
+}
+
 /* VARIABLES */
 :root {
     --c-dark: #212121;
@@ -17,6 +22,7 @@ body {
     font-family: var(--c-font-base);
     line-height: 1.7;
     color: var(--c-dark);
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, 
@@ -43,6 +49,7 @@ p {
     color: var(--c-orange);
 }
 
+
 a:hover {
     color: var(--c-red);
 }
@@ -63,9 +70,24 @@ img {
     box-shadow: var(--box-shadow);
 }
 
-.navbar-brand img {
-    max-width: 5%;
-    max-height: 5%;
+@media screen and (min-width:320px){
+    .navbar-brand img {
+        max-width: 20%;
+        max-height: 20%;
+    }
+    .navbar-brand {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .navbar-brand img {
+        max-width: 5%;
+        max-height: 5%;
+    }
+    .navbar-brand {
+        text-align: left;
+    }
 }
 
 .navbar-nav .nav-link{
@@ -97,11 +119,21 @@ img {
     background-size: cover;
 }
 
-#about img {
-    border: 5px solid var(--c-orange);
-    border-radius: 10px;
-    box-shadow: 20px 20px var(--c-red);
-    padding-bottom: 5px;
+@media screen and (min-width:320px){
+    #about img {
+        border: 5px solid var(--c-orange);
+        border-radius: 10px;
+        padding-bottom: 5px;
+    }
+}
+
+@media screen and (min-width: 800px){
+    #about img {
+        border: 5px solid var(--c-orange);
+        border-radius: 10px;
+        box-shadow: 20px 20px var(--c-red);
+        padding-bottom: 5px;
+    }
 }
 
 /* MEMBERS */
@@ -163,6 +195,25 @@ img {
     margin-right: auto;
     font-weight: 600;
     color: black;
+}
+
+@media screen and (min-width:320px){
+    .section-title-mobile h3{
+        text-align: center;
+    }
+    .section-title-mobile p{
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 800px){
+    .section-title-mobile h3{
+        text-align: left;
+    }
+    .section-title-mobile p{
+        text-align: left;
+        margin: 10;
+    }
 }
 
 
@@ -236,18 +287,21 @@ form button {
     background-color: teal;
 }
 
-@media screen and (min-width = 800px){
+@media screen and (min-width: 320px){
+    iframe {
+        width: 300px;
+        height: 200px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 800px){
     iframe {
         width: 300px;
         height: 400px;
     }
 }
-@media screen and (min-width = 600px){
-    iframe {
-        width: 200px;
-        height: 300px;
-    }
-}
+
 
 /* FOOTER */
 footer {
